@@ -1,0 +1,27 @@
+.app {
+  display: flex;
+  height: 100%;
+  aside {
+    padding: 10px;
+    padding-right: 20px;
+    min-width: 10vw;
+    // border-right: 1px dashed #888;
+    margin: 1vw;
+    height: 100%;
+    h3 {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #888;
+    }
+    ul {
+      margin:0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        padding:.5vw 0;
+      }
+    }
+  }
+  main {
+    padding:2vw;
+  }
+}
