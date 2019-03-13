@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Lifecycle from './Lifecycle/Lifecycle'
 import Clock from './Clock/Clock'
 import PureComponentDemo from './Lifecycle/PureComponent'
+import MyUpload from './upload/Upload'
+import TabSelector from './tab-selector/TabSelector'
 import styles from './index.module.scss'
 
 const menuList = [
@@ -18,6 +20,16 @@ const menuList = [
     name: 'PureComponentDemo',
     path: 'PureComponentDemo',
     component: PureComponentDemo,
+  },
+  {
+    name: 'upload-antd',
+    path: 'upload',
+    component: MyUpload,
+  },
+  {
+    name: 'tab-selector',
+    path: 'selector',
+    component: TabSelector,
   }
 ]
 class App extends Component {
