@@ -24,3 +24,17 @@
     background: orange;
   }
 }
+
+.selectAdvance {
+  .item {
+    border: 1px solid #777;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  .value {
+    background: #777;
+  }
+  .container {
+    display: flex;
+  }
+}

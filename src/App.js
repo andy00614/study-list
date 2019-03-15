@@ -5,7 +5,11 @@ import Clock from './Clock/Clock'
 import PureComponentDemo from './Lifecycle/PureComponent'
 import MyUpload from './upload/Upload'
 import TabSelector from './tab-selector/TabSelector'
+import TabSelectorAdvance from './tab-selector/TableSelectorHoc'
+import Count from './redux-tutorial/Count'
+import { Provider } from 'react-redux'
 import styles from './index.module.scss'
+import { store } from './redux/index'
 
 const menuList = [
   {
@@ -30,6 +34,15 @@ const menuList = [
     name: 'tab-selector',
     path: 'selector',
     component: TabSelector,
+  },
+  {
+    name: 'tab-selector-advance',
+    path: 'selectorad',
+    component: TabSelectorAdvance,
+  },{
+    name: 'redux-tutorial',
+    path: 'redux',
+    component: Count,
   }
 ]
 class App extends Component {
@@ -38,26 +51,27 @@ class App extends Component {
   }
   render() {
     return (
-      <Router>
-        <div className={styles.app}>
-          <aside>
-            <h3>Menu</h3>
-            <ul>
-              {
-                menuList.map(item => {
-                  return <li key={item.name}>
-                    <Link to={`/${item.path}`}>{item.name}</Link>
-                  </li>
-                })
-              }
-            </ul>
-          </aside>
-          <main>
-            {this.renderRoute()}
-          </main>
-        </div>
-      </Router>
-      
+      <Provider store={store}>
+        <Router>
+          <div className={styles.app}>
+            <aside>
+              <h3>Menu</h3>
+              <ul>
+                {
+                  menuList.map(item => {
+                    return <li key={item.name}>
+                      <Link to={`/${item.path}`}>{item.name}</Link>
+                    </li>
+                  })
+                }
+              </ul>
+            </aside>
+            <main>
+              {this.renderRoute()}
+            </main>
+          </div>
+        </Router>
+      </Provider>
     );
   }
 }
