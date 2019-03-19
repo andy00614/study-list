@@ -7,6 +7,7 @@ import TabSelectorAdvance from './tab-selector/TableSelectorHoc'
 import CheckoutQQ from './CheckoutQQ/Checkout'
 import Count from './redux-tutorial/Count'
 import Game from './Game/Game'
+import HelloIndex from './TSDemo/index'
 const menuList = [
   {
     name: 'clock',
@@ -43,11 +44,14 @@ const menuList = [
     name: 'check',
     path: 'check',
     component: CheckoutQQ,
-  },
-  {
+  },{
     name:'tic-tac-toe',
     path: 'game',
     component: Game
+  },{
+    name:'ts-demo',
+    path: 'tsdemo',
+    component: HelloIndex
   }
 ]
 export default menuList

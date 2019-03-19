@@ -29,6 +29,7 @@ class Checkout extends React.Component {
           value={this.state.iptValue}
           onChange={this.handleOnChange}
           placeholder="请输入正确的QQ号码"
+          defaultValue="33732843"
         />
         <Button
           type="primary"
