@@ -1,50 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Lifecycle from './Lifecycle/Lifecycle'
-import Clock from './Clock/Clock'
-import PureComponentDemo from './Lifecycle/PureComponent'
-import MyUpload from './upload/Upload'
-import TabSelector from './tab-selector/TabSelector'
-import TabSelectorAdvance from './tab-selector/TableSelectorHoc'
-import Count from './redux-tutorial/Count'
+import menuList from './routerList'
+
 import { Provider } from 'react-redux'
 import styles from './index.module.scss'
 import { store } from './redux/index'
-
-const menuList = [
-  {
-    name: 'clock',
-    path: 'clock',
-    component: Clock,
-  },{
-    name: 'Lifecycle',
-    path: 'Lifecycle',
-    component: Lifecycle,
-  },{
-    name: 'PureComponentDemo',
-    path: 'PureComponentDemo',
-    component: PureComponentDemo,
-  },
-  {
-    name: 'upload-antd',
-    path: 'upload',
-    component: MyUpload,
-  },
-  {
-    name: 'tab-selector',
-    path: 'selector',
-    component: TabSelector,
-  },
-  {
-    name: 'tab-selector-advance',
-    path: 'selectorad',
-    component: TabSelectorAdvance,
-  },{
-    name: 'redux-tutorial',
-    path: 'redux',
-    component: Count,
-  }
-]
 class App extends Component {
   renderRoute = () => {
     return menuList.map(item => <Route key={item.path} path={`/${item.path}`} component={item.component} />)
