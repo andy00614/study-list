@@ -117,7 +117,7 @@ export default class Log extends React.Component<object,State> {
         </div>
       </div>
       </Spin>
-      
+      // dev
     )
   }
 }
