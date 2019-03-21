@@ -5,8 +5,9 @@ import MyUpload from './upload/Upload'
 import TabSelector from './tab-selector/TabSelector'
 import TabSelectorAdvance from './tab-selector/TableSelectorHoc'
 import CheckoutQQ from './CheckoutQQ/Checkout'
-import Count from './redux-tutorial/Count'
+import Count from './redux-tutorial/Count.tsx'
 import Game from './Game/Game'
+import LogReg from './Form/index'
 import HelloIndex from './TSDemo/index'
 const menuList = [
   {
@@ -52,6 +53,10 @@ const menuList = [
     name:'ts-demo',
     path: 'tsdemo',
     component: HelloIndex
+  },{
+    name:'form',
+    path: 'form',
+    component: LogReg
   }
 ]
 export default menuList

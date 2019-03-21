@@ -1,6 +1,7 @@
 import React from 'react'
 import Hello from './Hello'
 import StateInTs from './TsInState'
+import Type from './Type'
 
 class HelloIndex extends React.Component {
   render() {
@@ -10,6 +11,8 @@ class HelloIndex extends React.Component {
         <Hello name="andy" enthusiasmLevel={7}/>
         <hr/>
         <StateInTs name="state"/>
+        <hr/>
+        <Type />
       </div>
     )
   }
