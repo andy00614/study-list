@@ -8,13 +8,6 @@ const selectColor = [{
 },{
   name: 'Red'
 }]
-const selectAnimal = [{
-  name: 'Dog'
-},{
-  name: 'Chicken'
-},{
-  name: 'Caw'
-}]
 class TableSelctorModule extends React.Component {
   render() {
     const { selectData, onChange, value } = this.props

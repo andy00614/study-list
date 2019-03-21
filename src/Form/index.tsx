@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, Button, message, Spin } from 'antd'
+import { Input, Button, message, Spin, Icon } from 'antd'
 import styles from './index.module.scss'
 
 interface State{
@@ -8,8 +8,10 @@ interface State{
   password: string
   loadding: boolean
 }
+const REG_TIPS = 'register now!'
+const LOGIN_TIPS = 'login now!'
 export default class Log extends React.Component<object,State> {
-  tips:string = 'Or register now!'
+  tips:string = REG_TIPS
   title:string = '登录系统'
   loadding:boolean = false
   state:State = {
@@ -53,7 +55,7 @@ export default class Log extends React.Component<object,State> {
             loadding:true
           })
           setTimeout(() => {
-            this.tips = 'Or login now!'
+            this.tips = LOGIN_TIPS
             this.title = '注册系统'
             this.setState({
               status: 'regist',
@@ -67,7 +69,7 @@ export default class Log extends React.Component<object,State> {
   switchStatus = (e:any) => {
     e.preventDefault() 
     const status = this.state.status === 'login' ? 'regist' : 'login'
-    this.tips = status === 'login' ? 'Or register now!' : 'Or login now!'
+    this.tips = status === 'login' ? REG_TIPS : LOGIN_TIPS
     this.title = status === 'login' ? '登录系统' : '注册系统'
     this.setState({
       status
@@ -80,33 +82,37 @@ export default class Log extends React.Component<object,State> {
         <div className={styles.container}>
         <h2>{this.title}</h2>
         <section className={styles.username}>
-          <span>用户名：</span>
-          <Input 
+          <Input
+            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} 
             value={iptValue}
             onChange={this.usernameChange}
+            placeholder="username"
           />
         </section>
         <section className={styles.password}>
-          <span>密码：</span>
           <Input 
+            prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
             value={password}
             onChange={this.passwordChange}
             type="password"
+            placeholder="password"
           />
         </section>
-        <section>
+        <section className={styles.btnBox}>
           <Button
             onClick={this.submit}
             type="primary"
+            className={styles.btn}
           >
             {
-              status === 'login' ? '登录' : '注册'
+              status === 'login' ? 'log in' : 'regist'
             }
           </Button>
         </section>
-        <div>
+        <div className={styles.tips}>
+          Or
           {
-            <a className={styles.tips} onClick={this.switchStatus}>{this.tips}</a> 
+            <a className={styles.tipsa} onClick={this.switchStatus}>{this.tips}</a> 
           }
         </div>
       </div>

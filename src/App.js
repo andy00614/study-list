@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {  HashRouter,Route, Link, Redirect } from "react-router-dom";
 import menuList from './routerList'
-
 import { Provider } from 'react-redux'
 import styles from './index.module.scss'
 import { store } from './redux/index'
+
+// const history = createBrowserHistory()
+
 class App extends Component {
   renderRoute = () => {
     return menuList.map(item => <Route key={item.path} path={`/${item.path}`} component={item.component} />)
@@ -12,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Router>
+        <HashRouter>
           <div className={styles.app}>
             <aside>
               <h3>Menu</h3>
@@ -23,14 +25,16 @@ class App extends Component {
                       <Link to={`/${item.path}`}>{item.name}</Link>
                     </li>
                   })
+                  
                 }
               </ul>
             </aside>
             <main>
               {this.renderRoute()}
+              {<Redirect to={`/form`} />}
             </main>
           </div>
-        </Router>
+        </HashRouter>
       </Provider>
     );
   }

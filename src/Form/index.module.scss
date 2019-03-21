@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  section {
+    margin-top: 1.5vw;
+  }
+  .btnBox {
+    text-align: center;
+    .btn {
+      width: 100%;
+    }
+  }
+  .tipsa {
+    padding:1vw 0;
+    margin-left: .5vw;
+  }
+}
