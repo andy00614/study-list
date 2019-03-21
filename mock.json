@@ -1,0 +1,15 @@
+{
+  "name": "test",
+  "data": [
+    {
+      "name": "andy",
+      "age": "23"
+    },{
+      "name": "react",
+      "age": "20"
+    },{
+      "name": "vue",
+      "age": "18"
+    }
+  ]
+}
