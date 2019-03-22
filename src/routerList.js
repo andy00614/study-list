@@ -9,6 +9,7 @@ import Count from './redux-tutorial/Count.tsx'
 import Game from './Game/Game'
 import LogReg from './Form/index'
 import HelloIndex from './TSDemo/index'
+import Auth from './Auth/Auth'
 const menuList = [
   {
     name: 'clock',
@@ -57,6 +58,10 @@ const menuList = [
     name:'form',
     path: 'form',
     component: LogReg
+  },{
+    name:'auth',
+    path: 'auth',
+    component: Auth
   }
 ]
 export default menuList
