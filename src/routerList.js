@@ -10,6 +10,7 @@ import Game from './Game/Game'
 import LogReg from './Form/index'
 import HelloIndex from './TSDemo/index'
 import Auth from './Auth/Auth'
+import TreeData from './Treeshow'
 const menuList = [
   {
     name: 'clock',
@@ -62,6 +63,10 @@ const menuList = [
     name:'auth',
     path: 'auth',
     component: Auth
+  },{
+    name:'TreeData',
+    path: 'tree',
+    component: TreeData
   }
 ]
 export default menuList
