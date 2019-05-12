@@ -16,14 +16,14 @@ class Treeshow extends React.Component {
       if(!item.children || (item.children && item.children.length === 0)) {
         console.log(left)
         return (
-          <div onClick={(e) => {e.stopPropagation();this.props.onClick(item,data)}} style={{paddingLeft:left}} key={item.key}>{item.title}</div>
+          <div onClick={(e) => {e.stopPropagation();this.props.onClick(item,this.props.data)}} style={{paddingLeft:left}} key={item.key}>{item.title}</div>
         )
       }
       return (
-        <div onClick={(e) => {e.stopPropagation();this.props.onClick(item,data)}} style={{paddingLeft:left}} key={item.key} className={styles.father}>
+        <div onClick={(e) => {e.stopPropagation();this.props.onClick(item,this.props.data)}} style={{paddingLeft:left}} key={item.key} className={styles.father}>
           {item.title}
           {
-            this.renderDom(item.children,left+80)
+            item.status && this.renderDom(item.children,left+80)
           }
         </div>
       )

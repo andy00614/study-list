@@ -4,6 +4,7 @@ import menuList from './routerList'
 import { Provider } from 'react-redux'
 import styles from './index.module.scss'
 import { store } from './redux/index'
+// import 'normalize.css'
 
 // const history = createBrowserHistory()
 

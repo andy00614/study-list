@@ -24,7 +24,7 @@ export function fetchProducts() {
       .then(json => {
         setTimeout(() => {
           dispath(fetchProductsSuccess(json.data))          
-        }, 2000);
+        }, 5000);
       })
       .catch(err => {
         dispath(fetchProductsFailure(err))

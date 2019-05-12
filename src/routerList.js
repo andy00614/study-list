@@ -11,6 +11,11 @@ import LogReg from './Form/index'
 import HelloIndex from './TSDemo/index'
 import Auth from './Auth/Auth'
 import TreeData from './Treeshow'
+import Fetch from './fetch'
+import Swiper from './Swiper'
+import Checkbox from './Checkbox'
+import Refresh from './Refresh'
+
 const menuList = [
   {
     name: 'clock',
@@ -67,6 +72,22 @@ const menuList = [
     name:'TreeData',
     path: 'tree',
     component: TreeData
+  },{
+    name:'Fetch',
+    path: 'fetch',
+    component: Fetch
+  },{
+    name: 'Swiper',
+    path: 'swiper',
+    component: Swiper
+  },{
+    name: 'checkbox',
+    path: 'checkbox',
+    component: Checkbox
+  },{
+    name:'redux-refresh',
+    path: 'redux-refresh',
+    component:Refresh
   }
 ]
 export default menuList

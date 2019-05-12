@@ -24,7 +24,7 @@ class List extends React.Component {
               })
             }
           </div>
-        </Spin>
+        </Spin>  
       </div>
     )
   }

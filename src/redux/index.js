@@ -12,3 +12,16 @@ export const store = createStore(rootReducer,composeWithDevTools(
   applyMiddleware(thunk)
 ))
 console.log(store.getState())
+
+
+
+
+
+
+
+
+
+
+
+
+
