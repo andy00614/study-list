@@ -1,0 +1,24 @@
+.container {
+  border: 1px solid #4E9FFC;
+  padding: 1vw;
+  width: 30vw;
+  background: #0c3259;
+  .title {
+    text-align: center;
+    padding-bottom: 1vw;
+    color:#fff;
+    .count {
+      color: #F5A623;
+    }
+  }
+  .bar {
+    height: 20vw;
+  }
+  .br {
+    height: 0vw;
+    border-bottom: 1px dashed #4E9FFC;
+  }
+  .tagCloud {
+    height: 20vw;
+  }
+}

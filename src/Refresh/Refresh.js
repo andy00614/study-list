@@ -12,9 +12,9 @@ class Refresh extends React.Component {
   }
 }
 
-// const mapStateToProps = ({count}) => ({
-//   count:count.count
-// })
-// export default connect(mapStateToProps,{})(Refresh)
+const mapStateToProps = ({count}) => ({
+  count:count.count
+})
+export default connect(mapStateToProps,{})(Refresh)
 
-export default Refresh
+// export default Refresh

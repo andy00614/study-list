@@ -13,6 +13,7 @@ class App extends Component {
     return menuList.map(item => <Route key={item.path} path={`/${item.path}`} component={item.component} />)
   }
   render() {
+    console.log(store)
     return (
       <Provider store={store}>
         <HashRouter>
@@ -26,7 +27,6 @@ class App extends Component {
                       <Link to={`/${item.path}`}>{item.name}</Link>
                     </li>
                   })
-                  
                 }
               </ul>
             </aside>

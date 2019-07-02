@@ -15,6 +15,8 @@ import Fetch from './fetch'
 import Swiper from './Swiper'
 import Checkbox from './Checkbox'
 import Refresh from './Refresh'
+import Telep from './Telep'
+import Job from './Job';
 
 const menuList = [
   {
@@ -88,6 +90,14 @@ const menuList = [
     name:'redux-refresh',
     path: 'redux-refresh',
     component:Refresh
+  },{
+    name:'component',
+    path: 'component',
+    component:Job
+  },{
+    name:'telep',
+    path: 'telep',
+    component:Telep
   }
 ]
 export default menuList
